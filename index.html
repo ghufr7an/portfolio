@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghufran Shakeel - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: #57eaf0;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h1, h2, h3 {
+            color: #6c63ff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            padding: 50px 20px;
+        }
+
+        .section:nth-child(even) {
+            background-color: #1b1b1b;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #1b1b1b;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            margin-left: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #1b1b1b, #121212);
+            animation: fadeIn 1.5s;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .hero p.tagline {
+            font-size: 1.5rem;
+            color: #57eaf0;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .hero p.description {
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        .hero img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 20px;
+            border: 3px solid #6c63ff;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Skills Section */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background: #57eaf0;
+            color: #121212;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: scale(1.1);
+        }
+
+        /* Timeline */
+        .timeline {
+            border-left: 2px solid #6c63ff;
+            padding-left: 20px;
+        }
+
+        .timeline-item {
+            margin-bottom: 20px;
+        }
+
+        .timeline-item h3 {
+            margin: 0;
+        }
+
+        .timeline-item p {
+            margin: 5px 0 0 0;
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            background: linear-gradient(135deg, #57eaf0, #121212);
+            padding: 50px 20px;
+            border-radius: 15px;
+            margin: 20px;
+            color: #ffffff;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .contact a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #121212;
+            border: 2px solid #57eaf0;
+            color: #57eaf0;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .contact a:hover {
+            background: #57eaf0;
+            color: #121212;
+        }
+
+        /* Back-to-Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #57eaf0;
+            color: #121212;
+            border: none;
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-to-top.show {
+            display: block;
+        }
+
+        /* Section Headings */
+        .section-heading {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#languages">Languages</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#research">Research Work</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <img src="file:///C:/Users/pc2/Downloads/IMG_2694%20(1).jpg" alt="Profile Picture">
+        <h1>Ghufran Shakeel</h1>
+        <p class="tagline">Network Engineer</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-heading">About Me</h2>
+            <p>
+                I am an Electrical Communication Engineer specializing in optical communication and computer
+                networking. Passionate about delivering scalable, intelligent solutions that transform lives through
+                state-of-the-art technology.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-heading">Skills</h2>
+            <div class="skills-list">
+                <div class="skill">MATLAB</div>
+                <div class="skill">Python</div>
+                <div class="skill">Cisco Packet Tracer</div>
+                <div class="skill">Routing & Switching</div>
+                <div class="skill">Linux</div>
+                <div class="skill">IP Subnetting</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-heading">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>University of Engineering and Technology, Taxila</h3>
+                    <p>Bachelor of Electrical Engineering (2020 - 2024)</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>PakTurk Maarif Int’l School & College</h3>
+                    <p>F.Sc Pre-Engineering (2018 - 2020)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages" class="section">
+        <div class="container">
+            <h2 class="section-heading">Languages</h2>
+            <ul>
+                <li>Turkish</li>
+                <li>English</li>
+                <li>Urdu</li>
+
+            </ul>
+        </div>
+    </section>
+
+<!-- Experience Section -->
+<section id="experience" class="section">
+    <div class="container">
+        <h2 class="section-heading">Work History</h2>
+        <div class="timeline">
+            <!-- IESCO Experience -->
+            <div class="timeline-item">
+                <h3>Electrical Intern</h3>
+                <p><strong>IESCO (Internship)</strong> | June 2024 – Aug 2024</p>
+                <ul>
+                    <li>Worked as an intern for 8 weeks at IESCO (Satellite Town & H8 grid station).</li>
+                    <li>Gained knowledge of basic configurations and issues in transmission and distribution.</li>
+                    <li>Developed a deeper understanding of transformers and their role in electrical transmission.</li>
+                </ul>
+            </div>
+            <!-- ZUBEX Experience -->
+            <div class="timeline-item">
+                <h3>Electrical Intern</h3>
+                <p><strong>ZUBEX</strong> | June 2023 – Dec 2023</p>
+                <ul>
+                    <li>Worked in the CSR (voice) Department, applying theoretical knowledge in a practical setting.</li>
+                    <li>Gained hands-on experience in professional environments while contributing to projects.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+ <!-- Projects Section -->
+<section id="projects" class="section">
+    <div class="container">
+        <h2 class="section-heading">Projects</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Fabric Defect Detector (FYP)</h3>
+                <p><strong>Duration:</strong> September 2023 – May 2024</p>
+                <ul>
+                    <li>Designed a Fabric Defect Detection System using Digital Image Processing techniques.</li>
+                    <li>Provided a reliable, automated, and efficient method to enhance quality control in the textile industry.</li>
+                </ul>
+            </div>
+            <div class="timeline-item">
+                <h3>Amplification of Sound Model</h3>
+                <p><strong>Duration:</strong> June 2023 – July 2024</p>
+                <ul>
+                    <li>Developed an innovative model for sound amplification using Digital Signal Processing techniques.</li>
+                    <li>Contributed to improved audio quality and clarity.</li>
+                </ul>
+            </div>
+            <div class="timeline-item">
+                <h3>Network Design for Organization Through Cisco Packet Tracer</h3>
+                <p><strong>Duration:</strong> May 2023 – June 2024</p>
+                <ul>
+                    <li>Successfully designed and implemented a comprehensive network infrastructure for an organization.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2 class="section-heading">Certifications</h2>
+            <ul>
+                <li>Linux Essential - CISCO </li>
+                <li>CCNA 200-301 - SIMPLILEARN </li>
+                <li>Network Support & Security - CISCO </li>
+                <li>Network Addressing and Basic Troubleshooting - CISCO </li>
+                <li>Networking Basics - CISCO </li>
+
+            </ul>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="section">
+        <div class="container">
+            <h2 class="section-heading">Research Work</h2>
+            <ul>
+                <li><a href="https://www.mdpi.com/2673-4591/75/1/9" target="_blank">Optimizing Bottleneck Flow and Enhancing Throughput in Prosthodontic Services Using Additive Manufacturing with Discrete Event Simulation and Central Composite Design † </a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <h2 class="section-heading">Contact Me</h2>
+        <p>Feel free to reach out for any projects, collaborations, or networking opportunities. Let's connect!</p>
+        <a href="mailto:ghufr7an@gmail.com">Email Me</a>
+        <a href="https://www.linkedin.com/in/ghufran7" target="_blank">LinkedIn</a>
+    </section>
+
+    <!-- Back-to-Top Button -->
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script>
+        // Back-to-top button functionality
+        const backToTopButton = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>
